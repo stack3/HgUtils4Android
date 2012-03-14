@@ -6,6 +6,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Get value from JSONObject easily.
+ * 
+ * Usage:
+ *   JSONPathQuery pathQuery = new JSONPathQuery(json);
+ *   String value1 = pathQuery.stringForPath("user.name");    
+ *   String value2 = pathQuery.stringForPath("user.name", "Nanashi-san");    
+ *   JSONArray friends = pathQuery.arrayForPath("user.friends");    
+ * 
+ * @author MIYAMOTO, Hideaki. stack3.net
+ *
+ */
 public class JSONPathQuery {
 	private JSONObject json;
 	
@@ -18,7 +30,7 @@ public class JSONPathQuery {
 		String name;
 	}
 	
-	public JSONObject JSONObjectForPathArray(String[] pathArray) {
+	private JSONObject JSONObjectForPathArray(String[] pathArray) {
 		if (pathArray.length == 0) {
 			return null;
 		}
