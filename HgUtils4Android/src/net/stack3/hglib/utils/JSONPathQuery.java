@@ -16,6 +16,8 @@ import org.json.JSONObject;
  *   JSONArray friends = pathQuery.arrayForPath("user.friends");    
  * 
  * @author MIYAMOTO, Hideaki. stack3.net
+ * 
+ * MIT License. 
  *
  */
 public class JSONPathQuery {
